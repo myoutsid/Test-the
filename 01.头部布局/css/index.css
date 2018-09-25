@@ -1,0 +1,66 @@
+/* reset css */
+html,body{height: 100%;overflow: hidden;}
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li{margin: 0px;padding: 0px;font: 14px "微软雅黑";}
+a{text-decoration: none;display: block;cursor: pointer;}
+li{list-style: none;}
+img{display: block;}
+
+/*清除浮动*/
+.clearfix{*zoom: 1;}
+.clearfix:after{content: "";display: block;clear: both;}
+
+/*头部样式*/
+#wrap{
+  width: 100%;
+  height: 100%;
+}
+
+#header{
+  width: 100%;
+  height: 80px;
+  background: pink;
+}
+#header .headerMain{
+  width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  background: deeppink;
+}
+#header .headerMain .logo{
+  float: left;
+  margin-top: 15px;
+}
+#header .headerMain .nav{
+  float: right;
+  margin-top: 50px;
+}
+#header .headerMain .nav li{
+  position: relative;
+  float: left;
+  margin-left: 40px;
+}
+#header .headerMain .nav li .down{
+  color: #009EE0;
+}
+#header .headerMain .nav li .up{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  overflow: hidden;
+  transition: width 1s;
+}
+/*
+  隐藏元素的方式
+    1. width height 0
+    2. opacity 0
+    3. visibility hidden
+    4. display none
+    5. transform scale(0)
+    6. position left -10000px
+ */
+#header .headerMain .nav li:hover .up{
+  /*width: 100%!important;*/
+  width: 100%;
+}
+
