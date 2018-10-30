@@ -1,0 +1,169 @@
+﻿//arguments对象 以数组的方式存储,函数调用时传入的所有参数
+				此时括号里事不设置形参得 直接由arguments代替
+			function fn4(){
+//				var sum = 0;
+//				console.log(arguments);
+//				for(var i = 0;i<arguments.length;i++){
+//					sum+=arguments[i];
+//				}
+//				return sum;
+
+
+
+
+js========8-3
+
+	用js使用修改类名的方式来改变列表的背景色的时候，由于类名的权重较小所以在类名的style里要设置!important来提高权重
+
+	节点的概念
+		nodeType  1---标签            2-----标签属性        3------文本        8-----注释
+			 * nodeName  大写的标签名       小写的属性名            #text          #comment
+			 * nodeValue  null             属性值                 文本内容             注释内容
+
+	childNodes 子节点:
+			/*
+			 * 在高级浏览器中,获取的是 标签(元素) ,文本(换行,空格),注释
+			 * 在低版本浏览器中,获取的是 标签(元素) ,文本(不包括换行,不包括空格),注释
+			 * 
+			 * children  子元素
+			 *  在高级浏览器中,获取的是 标签(元素)
+			 *  在低版本浏览器中,获取的是 标签(元素) ,注释
+	父节点和父元素
+		父节点和父元素:指的都是标签(元素)
+			 * parentNode 父节点:高级浏览器和低版本浏览器都能使用
+			 * parentElement 父元素:高级浏览器和低版本浏览器都能使用
+			 
+获取其他节点或元素
+		firstChild:获取第一个子节点
+		 * 高级浏览器获取:文本,空格,元素,注释
+		 * 低版本浏览器获取:文本(不包含空格和换行),注释
+		 * firstElementChild:获取第一个子元素
+		 * 高级浏览器获取:元素
+		 * 低版本浏览器获取:不支持此属性
+		 //第一个子节点
+		console.log(list.firstChild);
+		//第一个子元素
+		console.log(list.firstElementChild);
+		//最后一个子节点
+		console.log(list.lastChild);
+		//最后一个子元素
+		console.log(list.lastElementChild);
+		//下一个兄弟节点
+		console.log(li02.nextSibling);
+		//下一个兄弟元素
+		console.log(li02.nextElementSibling);
+	    //上一个兄弟节点
+		console.log(li02.previousSibling);
+	    //上一个兄弟元素
+		console.log(li02.previousElementSibling);
+	由于ie8以下的浏览器需要兼容一些新的关键词或者功能所以一些关键词需要进行兼容 进行兼容的方法就是定义一个函数，在这个函数里实现条件或者实现过滤条件的功能，最重要的是抽出需要传进去的参数，需要哪些参数进行变动 就是设置哪些参数
+	
+创建节点的三种方式
+		第一种创建节点的方式:
+			  document.write();只能在页面现在的时候使用,如果放在事件中,会干掉之前所有的dom元素【也就是会重新定义整个html】
+		第二种创建节点的方式
+			  用innerHTML,用字符串的方式创建
+			 案例：box.innerHTML = '<ul><li class="one" title="好吃">西红柿炒鸡蛋</li>';	
+		第三种创建节点的方式
+			  用对象的方式创建
+			  document.createElement('标签名') 创建节点
+			 父节点.appendChild(对象)   将子节点追加到父节点
+			 案例:var ul =document.createElement('ul');
+				box.appendChild(ul);
+
+禁用按钮	
+			//disabled属性  按钮禁用状态
+			btn.disabled = true;	
+		
+		
+offset系列:
+			 * offsetWidth:获取元素自身的宽+水平内边距+水平边框
+			 * offsetHeight:获取元素自身的高度+垂直内边距+垂直边框
+			 * offsetLeft: 在标准流的状态下获取的是父盒子的内边距+边框+外边距+自身的外边距
+			 *             在定位状态下,无论是父盒子加定位还是该元素加定位,获取的都是自身
+			 * 的left和margin-left
+			 * offsetTop:在标准流的状态下获取的是父盒子的内边距+边框+外边距+自身的外边距
+			 *             在定位状态下,无论是父盒子加定位还是该元素加定位,获取的都是自身的top和margin-top
+			 *  上述属性获取的都是数值型数据
+			 
+* scroll系列
+			 * scrollWidth: 获取的是内容的宽度,当内容小于盒子的时候等于盒子的宽度,
+			 * 当大于盒子的时候,是内容自身的宽度
+			 * scrollHeight: 获取的是内容的高度,当内容小于盒子的时候等于盒子的高度,
+			 * 当大于盒子的时候,是内容自身的高度
+			 * scrollTop: 获取元素垂直滚动的距离
+			 * scrollLeft:获取元素水平滚动的距离
+			 * onscroll:滚动事件
+			
+			
+			
+			
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		
+

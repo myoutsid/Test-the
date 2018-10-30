@@ -1,0 +1,134 @@
+	display: flex;
+       	display: -webkit-flex;
+
+flex-direction: row;  --- 主轴默认值
+flex-direction: column; --- 主轴与侧轴发生对调
+
+主轴的排列方向
+flex-direction: row-reverse; --- 主轴从左到右，start与end对调
+flex-direction: column-reverse; --- 主轴与侧轴发生对调，主轴start与end对调
+
+富裕空间的管理（主轴）
+		//justify：整理版面  content：内容
+	   justify-content: flex-start; --- 富裕空间在右侧
+    	   justify-content: flex-end; --- 富裕空间在左侧
+     	   justify-content: center; --- 富裕空间在两边
+    	   justify-content: space-around; --- 富裕空间在左侧包含每一个伸缩项目
+    	   justify-content: space-between; --- 每一个伸缩项目包含富裕空间
+
+富裕空间的管理（侧轴）
+			//align：排列   items：项目
+		        align-items: flex-start; --- 富裕空间在下边
+	  		align-items: flex-end; --- 富裕空间在上边
+	   		align-items: center; --- 富裕空间在两边
+	   		align-items: baseline; --- 富裕空间被基线分开
+	   		align-items: stretch; --- 拉伸，默认值
+
+
+
+如果想用z-index 就给本元素加一个相对定位 就可以调整加上z-index了
+
+
+弹性空间必须给伸缩项目子元素添加
+
+align-contnt 前提条件
+	1 父元素必须设置换行
+	2 父元素必须设置高
+
+如果主轴再水平横向上 如果想要实现换行的话可以给子元素设置宽 
+如果主轴在垂直方向上想给子元素换行这时要给子元素设置高
+
+新版本特有属性
+	实现换行
+	flex-wrap: wrap; --- 父元素宽度不够，子元素会进行换行
+	flex-wrap: wrap-reverse; --- 子元素换行的同时，侧轴的start与end发生对调
+	出现flex-wrap：wrap；之后，出现单行的富裕空间
+    	注意：align-items 每一行的富裕空间，align-items: flex-start;
+
+控制整体侧轴的富裕空间
+
+
+		align-content: center; --- 项目整体进行打包，放在整体侧轴的center处
+		注意：align-items 与 align-content 发生冲突时，看元素是否换行
+   	          如果没有换行align-items 生效
+        	  如果有换行align-content 生效 --- 打包
+
+基准值（flex项目）
+	子元素的基准值
+	flex-basis：0
+
+弹性空间
+	flex-grow: 1; --- 将富裕空间分配到项目上
+
+收缩率
+	flex-shrink:拉伸银子 0   ---不拉伸
+	flex-shrink:收缩因子  默认值：1 --- 收缩
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
